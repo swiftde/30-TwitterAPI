@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Twitter_Tutorial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JZQ-gV-h5j">
+                                <rect key="frame" x="225" y="20" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="ETi-84-59r"/>
+                                    <constraint firstAttribute="height" constant="150" id="i4E-7Q-Rfd"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xb-lo-fjv">
+                                <rect key="frame" x="266" y="178" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="xKv-s7-IQG"/>
+                                    <constraint firstAttribute="height" constant="30" id="yg1-1X-JrC"/>
+                                </constraints>
+                                <state key="normal" title="Bild laden">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="bildLadenButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FSY-LW-0dj"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oHs-H5-5B0">
+                                <rect key="frame" x="16" y="216" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sfG-rd-rbl">
+                                <rect key="frame" x="253" y="254" width="95" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="Rde-N1-m1c"/>
+                                    <constraint firstAttribute="height" constant="30" id="hny-or-gVd"/>
+                                </constraints>
+                                <state key="normal" title="Tweet senden">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="tweetSendenButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="VSx-1G-y8P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="4Xb-lo-fjv" secondAttribute="centerX" id="3xO-bC-2vr"/>
+                            <constraint firstAttribute="centerX" secondItem="JZQ-gV-h5j" secondAttribute="centerX" id="6Kf-Jn-WVm"/>
+                            <constraint firstAttribute="centerX" secondItem="sfG-rd-rbl" secondAttribute="centerX" id="GwS-GT-dbA"/>
+                            <constraint firstAttribute="centerX" secondItem="oHs-H5-5B0" secondAttribute="centerX" id="S8B-ig-LEf"/>
+                            <constraint firstItem="oHs-H5-5B0" firstAttribute="top" secondItem="4Xb-lo-fjv" secondAttribute="bottom" constant="8" id="VOr-Yb-RPi"/>
+                            <constraint firstAttribute="trailing" secondItem="oHs-H5-5B0" secondAttribute="trailing" constant="16" id="cYi-QV-0jg"/>
+                            <constraint firstItem="4Xb-lo-fjv" firstAttribute="top" secondItem="JZQ-gV-h5j" secondAttribute="bottom" constant="8" id="oKK-Vn-15N"/>
+                            <constraint firstItem="JZQ-gV-h5j" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="topMargin" constant="20" id="q3s-BI-mp0"/>
+                            <constraint firstItem="sfG-rd-rbl" firstAttribute="top" secondItem="oHs-H5-5B0" secondAttribute="bottom" constant="8" id="rRl-kO-2YP"/>
+                            <constraint firstItem="oHs-H5-5B0" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="wTj-yU-V9N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="JZQ-gV-h5j" id="Iac-eF-6b6"/>
+                        <outlet property="textField" destination="oHs-H5-5B0" id="Wa7-tu-PLa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
